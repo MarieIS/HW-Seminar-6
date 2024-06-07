@@ -1,18 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-void GetCountAmount(int length)
+int GetCountAmount(int length)
 {
-   int count = 0;
+   int counter = 0;
    for (int i = 0; i < length; i++)
    {
       Console.Write("Введите ваше "+(i+1)+" целое число: ");
       int user_input = Convert.ToInt32(Console.ReadLine());
       if (user_input > 0) 
       {
-         count++;
+         counter++;
       }
    }
-   Console.WriteLine($"Количество положительных чисел равно: {count}");
+   return counter;
 }
 
 int GetNumberAmount(string message)
@@ -22,4 +22,5 @@ int GetNumberAmount(string message)
 }
 
 int number = GetNumberAmount("Введите желаемое количество чисел: ");
-GetCountAmount(number);
+int count = GetCountAmount(number);
+Console.WriteLine($"Количество положительных чисел равно: {count}");
