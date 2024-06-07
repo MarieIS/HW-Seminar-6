@@ -4,7 +4,7 @@ float GetY(int coeff_k, int coeff_b, float x_coord)
    return (coeff_k * x_coord + coeff_b);
 }
 
-float GetX(int coeff_k1, int coeff_b1, int coeff_k2, int coeff_b2) /*k1x+b1=k2x+b2*/
+float GetX(int coeff_k1, int coeff_b1, int coeff_k2, int coeff_b2)
 {
    return (coeff_b2 - coeff_b1) / (coeff_k1 - coeff_k2);
 }
